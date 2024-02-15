@@ -11,6 +11,6 @@ services:
     ports:
       - 3000:3000
     volumes:
-      #- ./configs/grafana/prometheus-datasource.yml:/etc/grafana/provisioning/datasources/prometheus-datasource.yml
+      - ./configs/grafana/prometheus-datasource.yml:/etc/grafana/provisioning/datasources/prometheus-datasource.yml
       - ./configs/grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/main.yaml
       - ./configs/grafana/telegraf.json:/var/lib/grafana/dashboards/telegraf.json

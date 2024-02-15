@@ -2,7 +2,7 @@
   "__inputs": [
     {
       "name": "prometheus",
-      "label": "telegraf",
+      "label": "prometheus",
       "description": "",
       "type": "datasource",
       "pluginId": "prometheus",
@@ -32,7 +32,7 @@
     {
       "type": "datasource",
       "id": "prometheus",
-      "name": "Prometheus",
+      "name": "prometheus",
       "version": "1.0.0"
     },
     {
@@ -76,7 +76,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -147,7 +147,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -162,7 +162,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=\"cpu_usage_guest_nice\", cpu=\"cpu-total\", host=\"$host\"}[$__range])",
@@ -175,7 +175,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=\"cpu_usage_idle\", cpu=\"cpu-total\", host=\"$host\"}[$__range])",
@@ -188,7 +188,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=\"cpu_usage_iowait\", cpu=\"cpu-total\", host=\"$host\"}[$__range])",
@@ -201,7 +201,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=\"cpu_usage_irq\", cpu=\"cpu-total\", host=\"$host\"}[$__range])\n",
@@ -214,7 +214,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=\"cpu_usage_nice\", cpu=\"cpu-total\", host=\"$host\"}[$__range])",
@@ -227,7 +227,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=\"cpu_usage_softirq\", cpu=\"cpu-total\", host=\"$host\"}[$__range])",
@@ -240,7 +240,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=\"cpu_usage_steal\", cpu=\"cpu-total\", host=\"$host\"}[$__range])",
@@ -253,7 +253,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=\"cpu_usage_system\", cpu=\"cpu-total\", host=\"$host\"}[$__range])",
@@ -266,7 +266,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=\"cpu_usage_user\", cpu=\"cpu-total\", host=\"$host\"}[$__range])",
@@ -283,7 +283,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -351,7 +351,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "expr": "avg_over_time(mem_used_percent{host=\"$host\"}[$__range])",
           "instant": false,
@@ -365,7 +365,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -433,7 +433,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "expr": "avg_over_time(swap_used_percent{host=\"$host\"}[$__range])",
           "instant": false,
@@ -447,7 +447,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -518,7 +518,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "expr": "avg_over_time(disk_used_percent{host=\"$host\"}[$__range])",
           "instant": false,
@@ -532,7 +532,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -603,7 +603,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "expr": "avg_over_time(disk_inodes_used{host=\"$host\"}[$__range]) / avg_over_time(disk_inodes_total{host=\"$host\"}[$__range]) * 100",
           "instant": false,
@@ -617,7 +617,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -701,7 +701,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "{__name__=~\"cpu_.*\", cpu=\"cpu-total\", host=\"$host\"}",
@@ -716,7 +716,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -800,7 +800,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "expr": "{__name__=~\"(mem_|swap_)(used|total)\", host=\"$host\"}",
           "instant": false,
@@ -814,7 +814,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -898,7 +898,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "rate(net_bytes_recv{host=\"$host\"}[10s])",
@@ -909,7 +909,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "- rate(net_bytes_sent{host=\"$host\"}[10s])",
@@ -924,7 +924,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -991,7 +991,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=~\"processes_blocked\", host=\"$host\"}[$__range])",
@@ -1002,7 +1002,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=~\"processes_dead\", host=\"$host\"}[$__range])\n",
@@ -1015,7 +1015,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=~\"processes_idle\", host=\"$host\"}[$__range])",
@@ -1028,7 +1028,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=~\"processes_paging\", host=\"$host\"}[$__range])",
@@ -1041,7 +1041,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=~\"processes_running\", host=\"$host\"}[$__range])",
@@ -1054,7 +1054,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=~\"processes_sleeping\", host=\"$host\"}[$__range])",
@@ -1067,7 +1067,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=~\"processes_stopped\", host=\"$host\"}[$__range])",
@@ -1080,7 +1080,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=~\"processes_total\", host=\"$host\"}[$__range])",
@@ -1093,7 +1093,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=~\"processes_total_threads\", host=\"$host\"}[$__range])",
@@ -1106,7 +1106,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=~\"processes_unknown\", host=\"$host\"}[$__range])",
@@ -1119,7 +1119,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "avg_over_time({__name__=~\"processes_zombies\", host=\"$host\"}[$__range])",
@@ -1136,7 +1136,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -1220,7 +1220,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "expr": "{__name__=~\"system_load.*\", host=\"$host\"}",
           "instant": false,
@@ -1234,7 +1234,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -1318,7 +1318,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "expr": "{__name__=~\"disk_(used|total)\", host=\"$host\"}",
           "instant": false,
@@ -1332,7 +1332,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -1428,7 +1428,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "sum by (container_name)(docker_container_cpu_usage_percent{host=\"$host\"})",
@@ -1443,7 +1443,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -1539,7 +1539,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "editorMode": "code",
           "expr": "sum by (container_name)(docker_container_mem_usage_percent{host=\"$host\"})",
@@ -1554,7 +1554,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -1644,7 +1644,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "expr": "topk(30, procstat_cpu_usage{host=\"$host\"})",
           "instant": false,
@@ -1658,7 +1658,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -1748,7 +1748,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "expr": "topk(30, procstat_memory_usage{host=\"$host\"})",
           "instant": false,
@@ -1762,7 +1762,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -1896,7 +1896,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "expr": "procstat_cpu_usage{host=\"$host\"}",
           "instant": false,
@@ -1923,7 +1923,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${prometheus}"
+        "uid": "prometheus"
       },
       "description": "",
       "fieldConfig": {
@@ -2045,7 +2045,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${prometheus}"
+            "uid": "prometheus"
           },
           "expr": "procstat_memory_usage{host=\"$host\"}",
           "instant": false,
@@ -2079,7 +2079,7 @@
         "current": {},
         "datasource": {
           "type": "prometheus",
-          "uid": "${prometheus}"
+          "uid": "prometheus"
         },
         "definition": "label_values(system_n_cpus, host)",
         "hide": 0,
