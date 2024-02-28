@@ -6,6 +6,14 @@
         <endpoint>http://minio:9001/root/data/</endpoint>
         <access_key_id>minio</access_key_id>
         <secret_access_key>minio123</secret_access_key>
+
+        <metadata_path>/var/lib/clickhouse/disks/minio/</metadata_path>
+        <cache_enabled>true</cache_enabled>
+        <data_cache_enabled>true</data_cache_enabled>
+        <enable_filesystem_cache>true</enable_filesystem_cache>
+        <cache_on_write_operations>true</cache_on_write_operations>
+        <max_cache_size>1Gi</max_cache_size>
+        <cache_path>/var/lib/clickhouse/disks/minio/cache/</cache_path>
       </minio>
     </disks>
     <policies>
